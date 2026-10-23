@@ -22,8 +22,9 @@
   --verde-agua:#e6f1ee;
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
+  min-width:0;
   font-family:"Fredoka",system-ui,sans-serif;
   color:var(--texto);
   background:#fbfaf7 url(img/papel.webp) center/cover fixed;
@@ -36,6 +37,7 @@ section{
   min-height:100svh;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:3rem 1.25rem;
+  overflow:clip;
 }
 .deco{position:absolute;pointer-events:none;z-index:0}
 .conteudo{position:relative;z-index:1;width:100%;max-width:26rem}
@@ -58,20 +60,20 @@ section{
 .cartao{
   background:var(--azul-claro);border:2px solid #fff;border-radius:1.6rem;
   box-shadow:0 0 0 2px #c3e0f4;margin-top:-.9rem;padding:1.8rem 1rem 1.2rem;
-  display:flex;align-items:center;justify-content:center;gap:1.4rem;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem 1.4rem;
   color:var(--azul-escuro);
 }
 .cartao .data{font-size:clamp(2.2rem,10vw,3rem);font-weight:600;line-height:1}
 .cartao .dia{font-size:1.4rem;font-weight:600;letter-spacing:.03em}
 .cartao .hora{font-size:1.7rem;font-weight:600}
-.acoes{display:flex;justify-content:center;gap:2.5rem;margin-top:2rem}
+.acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem clamp(1rem,6vw,2.5rem);margin-top:2rem}
 .acao{
   display:flex;flex-direction:column;align-items:center;gap:.5rem;
-  color:var(--texto);text-decoration:none;font-weight:600;font-size:.95rem;max-width:7.5rem;
+  color:var(--texto);text-decoration:none;font-weight:600;font-size:.95rem;max-width:7.5rem;min-width:0;
   transition:transform .2s;
 }
 .acao:hover,.acao:focus-visible{transform:translateY(-4px)}
-.acao img{height:4.5rem;width:auto}
+.acao img{height:4.5rem;width:auto;max-width:100%}
 .dica{display:flex;flex-direction:column;align-items:center;margin-top:1.2rem;font-size:.9rem;font-weight:600;color:var(--azul-escuro)}
 .dica img{width:2.4rem;opacity:.9}
 
@@ -134,7 +136,7 @@ footer{padding:1.5rem;font-size:.9rem;color:var(--azul-escuro);background:var(--
         <img src="img/fralda.webp" alt="" width="360" height="324">
         Sugestões de presentes
       </a>
-      <a class="acao" href="https://maps.apple/p/I-fDvm~37_aBEE" target="_blank" rel="noopener">
+      <a class="acao" href="https://maps.app.goo.gl/h47kTwjiRLzRytMP6" target="_blank" rel="noopener">
         <img src="img/local.webp" alt="" width="240" height="240">
         Localização
       </a>
@@ -169,7 +171,7 @@ footer{padding:1.5rem;font-size:.9rem;color:var(--azul-escuro);background:var(--
   <div class="conteudo">
     <h2 class="script">Localização</h2>
     <img src="img/local.webp" alt="" width="240" height="240">
-    <a class="botao" href="https://maps.apple/p/I-fDvm~37_aBEE" target="_blank" rel="noopener">Abrir no mapa</a>
+    <a class="botao" href="https://maps.app.goo.gl/h47kTwjiRLzRytMP6" target="_blank" rel="noopener">Abrir no mapa</a>
   </div>
 </section>
 
